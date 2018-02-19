@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/background.jpeg");
+      /* Full height */
+      height: 100%; 
+    /* background: url("../images/concrete_seamless.png");
+    background-color: blue */
+}
+p{
+ color:black  ;
+}
