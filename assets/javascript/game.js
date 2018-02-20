@@ -2,41 +2,57 @@
 
 // Object Game
 
-    // 1 set global init
-    // 2 Inititalize Game
-    // 3 Randomely assign image a number
-    // 3 set Event Handler Adding listener on images only
-    // 4 OnImageClick() Add the image number to Totalscore
-    // 5 Logic:
+    
+   
+    
+    
+    // 5 OnImageClick() Add the image number to Totalscore
+    // 6 Logic:
     // If Totalscore> Number function Lose() random()
     // If Totalscore== Number function Win()
-    // Lose function update Lose html
-    // Win function update Win html
+    // 7Lose function update Lose html
+    // 8 Win function update Win html
        
 
 
-
 var game = {
+// 1 set global init
 // Make our variables global to the runtime of our application
-Win: "",
-Loses:"",
-Number:"",
-Totalscore:"",
 
+// 2 Inititalize Game
 // Use a function to initialize our Game.
 initializeGame: function () {
    
     game.Win = "";
     game.Loses = "";
-    game.Number = "";
-    game.Totalscore = "";
+    game.Number = "0";
+    game.Totalscore = "0";
     game.Image1Value="";
     game.Image2Value="";
     game.Image3Value="";
     game.Image4Value="";
-    //$("#Crystal1, #Crystal2, #Crystal2, #Crystal3, #Number, #Total_score").empty();
+    //$("#Crystal1, #Crystal2, #Crystal3, #Crystal4, #Number, #Total_score").empty();
 },
 
+// 3 Randomely assign value to image
+Suffle_Number: function () {
+
+    for (i = 1 ; i < 39; i++) {
+        game.Number = Math.floor(Math.random() * (i +1));
+        
+    }
+    console.log("game number "+ game.Number)
+    for (i = 1 ; i < 12; i++) {
+        game.Image1Value=Math.floor(Math.random() * (i +1))
+        game.Image2Value=Math.floor(Math.random() * (i +1))
+        game.Image3Value=Math.floor(Math.random() * (i +1))
+        game.Image4Value=Math.floor(Math.random() * (i +1))
+}
+console.log("image values: "+game.Image1Value,game.Image2Value,game.Image3Value,game.Image4Value)
+}
+,
+
+// 4 set Event Handler Adding listener on images only
 setupEventHandlers: function () {
    
     //  $("#image").on("click", function() {
@@ -46,8 +62,10 @@ setupEventHandlers: function () {
 
 
     // Add an on click listener to all elements that have the class "number"
-    $("#Crystal1").on("click", game.onImageClick);
-
+    $("#Crystal1").on("click", game.onCrystal1Click);
+    $("#Crystal2").on("click", game.onCrystal2Click);
+    $("#Crystal3").on("click", game.onCrystal3Click);
+    $("#Crystal4").on("click", game.onCrystal4Click);
     // $("#image").on("click", function() {
     //     // ... we trigger an alert.
     //     alert("I've been clicked!");
@@ -63,11 +81,20 @@ setupEventHandlers: function () {
     // $(".clear").on("click", initializeCalculator);
 }
 ,
-onImageClick: function () {
+onCrystal1Click: function () {
 
-    $("#Crystal1").text("hi");
-    this.Totalscore =  $(this).val();
-    alert ("Image total number: "+this.Totalscore)
+    // $("#Crystal1").text("hi");
+    // this.Totalscore =  $(this).val();
+    // alert ("Image total number: "+this.Totalscore)
+    
+    //var image_number=$(this).val();
+
+    
+    alert("image number"+game.Image1Value)
+    var numb=parseInt(game.Number) + parseInt(game.Image1Value)
+    game.Number=numb
+    alert("Number"+numb)
+    console.log(game.Number)
 
     // // If operator is chosen, we should be writing the secondNumber, otherwise, the firstNumber
     // if (isOperatorChosen) {
@@ -81,17 +108,44 @@ onImageClick: function () {
 }
 ,
 
+onCrystal2Click: function () {
+
+    alert("image number"+game.Image2Value)
+    var numb=parseInt(game.Number) + parseInt(game.Image2Value)
+    game.Number=numb
+    alert("Number"+numb)
+    console.log(game.Number)
 
 
-Suffle_Number: function () {
-    for (i = 1 ; i < 12; i++) {
-        game.Image1Value=Math.floor(Math.random() * (i +1))
-        game.Image2Value=Math.floor(Math.random() * (i +1))
-        game.Image3Value=Math.floor(Math.random() * (i +1))
-        game.Image4Value=Math.floor(Math.random() * (i +1))
-}
+
 }
 ,
+
+onCrystal3Click: function () {
+
+    alert("image number"+game.Image3Value)
+    var numb=parseInt(game.Number) + parseInt(game.Image3Value)
+    game.Number=numb
+    alert("Number"+numb)
+    console.log(game.Number)
+}
+,
+
+onCrystal4Click: function () {
+
+    alert("image number"+game.Image4Value)
+    var numb=parseInt(game.Number) + parseInt(game.Image4Value)
+    game.Number=numb
+    alert("Number"+numb)
+    console.log(game.Number)
+
+}
+,
+
+
+
+
+
 
 
 // onOperatorClick: function () {
@@ -169,9 +223,9 @@ $(document).ready(function() {
     //   });
 
     game.initializeGame()
-    game.setupEventHandlers()
     game.Suffle_Number()
-alert(game.Image1Value)
+    game.setupEventHandlers()
+
 
 });
 
