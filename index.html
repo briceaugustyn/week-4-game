@@ -7,21 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+
 </head><title>Crystal game</title>
 </head>
 <body>
   
-    <H1>Crystals collectors</H1>
-    <p>You will given a random number at the start of the game, There are four crystals below.By clicking on a crystal you will add a specific amout of points to your total score. You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. The value of each crystals is hidden from you until you click on it. Each time when the game starts, the game will change the values of each crystals.</p>
-    <p>number</p>
-    <p>Win: 0</p>
-    <p>loses: 0</p>
-    <img src="assets/images/crystal1.png" height= "100px" width= "100px">
-    <img src="assets/images/crystal2.jpg" height= "100px" width= "100px">
-    <img src="assets/images/crystal3.jpg" height= "100px" width= "100px">
-    <img src="assets/images/crystal4.png" height= "100px" width= "100px">
-    
-    <p>your total score is</p>
-    <p>0</p>
+    <div id="Title"><H1>Crystals collectors!</H1></div>
+    <div id="Instructions"><p>You will given a random number at the start of the game, There are four crystals below.By clicking on a crystal you will add a specific amout of points to your total score. You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. The value of each crystals is hidden from you until you click on it. Each time when the game starts, the game will change the values of each crystals.</p></div>
+    <div id="Number"><p>39</p></div>
+    <div id="WL">
+            <div id="Win"><p>Win: 0</p></div>
+            <div id="Loses"><p>loses: 0</p></div>
+    </div>
+    <div id="Image">
+        <img src="assets/images/crystal1.png" class="Crystal" value="10" id="Crystal1" height= "100px" width= "100px">
+        <img src="assets/images/crystal2.jpg" class="Crystal" id="Crystal2" height= "100px" width= "100px">
+        <img src="assets/images/crystal3.jpg" class="Crystal" id="Crystal3" height= "100px" width= "100px">
+        <img src="assets/images/crystal4.png" class="Crystal" id="Crystal4" height= "100px" width= "100px">
+    </div>
+    <div id="Total_score"> <p>0</p></div>
+    <div id="Total_score-text"> <p>your total score is</p></div>
+  
+   
 </body>
 </html>

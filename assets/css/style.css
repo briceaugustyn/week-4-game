@@ -1,10 +1,56 @@
 body {
-    background-image: url("../images/background.jpeg");
-      /* Full height */
-      height: 100%; 
-    /* background: url("../images/concrete_seamless.png");
-    background-color: blue */
+     background-image: url("../images/background.jpg");
+     color: white;
+    background-color: blue;
+    padding: 20px;
 }
 p{
- color:black  ;
+ /*color:black  ;*/
+}
+
+#Title {
+    background-color: brown;
+    color: white;
+    margin-right: 1000px;
+}
+#Instructions {
+    background-color: rgb(243, 200, 59);
+    color: green;
+    margin-right: 1000px;
+}
+
+#Number {
+    background-color: green;
+    color: darkblue;
+    margin-right: 1000px;
+    font-size: 30px;
+}
+
+#WL {
+    background-color: turquoise;
+    color: black;
+    margin-right: 1000px;
+    /* float: left; */
+}
+
+#Image {
+    background-color: white;
+    color: black;
+    margin-right: 900px;
+    
+}
+
+#Total_score-text {
+    background-color: rgb(32, 214, 205);
+    color: white;
+    margin-right: 1200px;
+    
+}
+
+#Total_score {
+    background-color: rgb(32, 214, 205);
+    color: white;
+    margin-right: 1200px;
+    font-size: 30px;
+    
 }
